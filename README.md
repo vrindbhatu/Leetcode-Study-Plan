@@ -1,2 +1,2 @@
-# SQL-Study-Plan
+# SQL-Python-Study-Plan
 Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)

@@ -12,20 +12,17 @@ class Solution:
                 return
             
             result.append(node.val)
-            
             if node.left:
-                dfs_leftmost(node.left)
-                
+                dfs_leftmost(node.left)   
             elif node.right:
                 dfs_leftmost(node.right)
-            
-            
+        
         def dfs_leaves(node):
             if not node:
                 return
             
             dfs_leaves(node.left)
-            
+                
             if node != root and not node.left and not node.right:
                 result.append(node.val)
                 
@@ -33,18 +30,16 @@ class Solution:
             
             
         def dfs_rightmost(node):
-            
             if not node.left and not node.right:
                 return
             
             if node.right:
-                dfs_rightmost(node.right)
+                dfs_rightmost(node.right)   
             elif node.left:
                 dfs_rightmost(node.left)
                 
             result.append(node.val)
-            
-            
+              
             
         if not root:
             return []
@@ -60,4 +55,6 @@ class Solution:
             dfs_rightmost(root.right)
             
         return result
+            
+            
         

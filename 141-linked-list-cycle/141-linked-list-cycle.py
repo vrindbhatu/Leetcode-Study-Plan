@@ -1,3 +1,4 @@
+#Vrinda
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
@@ -6,10 +7,11 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
+        
         seen_nodes = set()
         while head != None:
             if head in seen_nodes:
-                return True
+                 return True
             seen_nodes.add(head)
             head = head.next
             
@@ -29,7 +31,7 @@ class Solution:
 # class Solution:
 #     def hasCycle(self, head):
 #         slow = head
-#         fast = head.next
+#         fast = head
         
 #         while slow!=fast:
 #             if fast = None or fast.next.next = None:

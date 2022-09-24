@@ -1,10 +1,15 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        twoSum = {}
         
-        for i,num in enumerate(nums):
-            diff = target - num
-            if diff in twoSum:
-                return(twoSum[diff],i)
+        maph = {}
+        
+        for i in range(0,len(nums)):
+            diff = target - nums[i]
+            
+            if diff in maph:
+                return (maph[diff],i)
+            
+            
             else:
-                twoSum[num] = i 
+                maph[nums[i]] = i
+        

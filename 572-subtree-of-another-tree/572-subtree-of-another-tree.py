@@ -1,3 +1,4 @@
+#vrinda
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -18,19 +19,16 @@ class Solution:
  
 
         queue = deque([root])
-        ans = False
         while queue:
             node = queue.popleft()       
-            ans = isCheck(node, subRoot)
+            if isCheck(node, subRoot):
+                return True
                 
             if node:
                 queue.append(node.left)
                 queue.append(node.right)
             
-            if ans:
-                return True
-                
-        return ans
+        return False
                 
         
             

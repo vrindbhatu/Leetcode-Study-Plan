@@ -15,6 +15,9 @@ class Solution:
             return (validate(node.right, node.val, high) and validate(node.left,low, node.val))
         
         return validate(root)
+    
+    
+    
 
 
         
